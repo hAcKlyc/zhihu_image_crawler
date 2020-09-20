@@ -4,41 +4,7 @@ import http.cookiejar
 from bs4 import BeautifulSoup
 import os
 '''
-page = 1
-root_url = 'https://www.zhihu.com/collection/52598162?page=' + str(page)
-xsrf = '0019a34eccfe90165a44cdff664fb51f'
-User_Agent = "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0"
-Referer = "https://www.zhihu.com/"
-headers={
-    'User-Agent' : User_Agent,
-    'Referer' : Referer
-}
-
-
-#抓url
-
-request = urllib.request.Request(root_url)
-response = opener.open(request)
-content = response.read().decode('utf-8')
-soup = BeautifulSoup(content,'html.parser')
-url_tems = soup.find_all('a', class_="toggle-expand")
-urls_set = set()
-for url in url_tems:
-    full_url = urllib.request.urljoin('https://www.zhihu.com', url.get('href'))
-    urls_set.add(full_url)
-    print(full_url)
-'''
-'''
-#抓photo
-test_url ='https://www.zhihu.com/question/46458423/answer/139116592'
-request = urllib.request.Request(test_url)
-response = opener.open(request)
-content = response.read().decode('utf-8')
-soup = BeautifulSoup(content,'html.parser')
-image_url = set()
-image_url_tem = soup.find_all('img',class_="origin_image zh-lightbox-thumb lazy")
-for url_tem in image_url_tem :
-    image_url.add(url_tem.get('data-original'))
+不维护了…自己修一修吧
 '''
 class mybeautySpider():
 
